@@ -7,7 +7,7 @@ var app = angular
     'ngRoute',    
     'firebase'
   ])
-  .constant('FURL', 'https://your-firebase.firebaseio.com/')  
+  .constant('FURL', 'https://mynt-task.firebaseio.com/')  
   .config(function ($routeProvider) {
     $routeProvider      
       .when('/', {
@@ -17,11 +17,13 @@ var app = angular
         templateUrl: 'views/post.html',
         controller: 'TaskController'
       })
-      .when('/edit', {
-        templateUrl: 'views/edit.html'
+      .when('/edit/:taskId', {
+        templateUrl: 'views/edit.html',
+        controller: 'TaskController'
       })
       .when('/browse', {
-        templateUrl: 'views/browse.html'
+        templateUrl: 'views/browse.html',
+        controller: 'TaskController'
       })
       .otherwise({
         redirectTo: '/'
