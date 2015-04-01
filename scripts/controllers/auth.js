@@ -8,6 +8,7 @@ app.controller('AuthController', function($scope, $location, Auth) {
 			$location.path('/');
 		}, function(err) {
 			console.log("Error...");
+			console.log(err);
 		});
 	};
 
@@ -38,5 +39,5 @@ app.controller('AuthController', function($scope, $location, Auth) {
 				console.log("Error...");
 			});
 	};
-	
+
 });
