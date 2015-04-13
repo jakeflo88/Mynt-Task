@@ -5,8 +5,9 @@ app.factory('Comment', function(FURL, $firebase) {
 	var ref = new Firebase(FURL);
 
 	var Comment = {
-		comments: function(taskID) {
-			return $firebase(ref.child('comments').child(taskID)).$asArray();
+		comments: function(taskId) {
+			console.log(taskId);
+			return $firebase(ref.child('comments').child(taskId)).$asArray();
 		},
 
 		addComment: function(taskId, comment) {
