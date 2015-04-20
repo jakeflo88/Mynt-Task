@@ -28,6 +28,9 @@ var app = angular
         templateUrl: 'views/browse.html',
         controller: 'BrowseController'
       })
+      .when('/dashboard', {
+        templateUrl: 'views/dashboard.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
