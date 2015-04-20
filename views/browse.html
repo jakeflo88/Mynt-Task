@@ -71,7 +71,7 @@
 								</div>
 							</div>
 
-							<div ng-show="isOpen(selectedTask) && !isTaskCreator(selectedTask)">
+							<div ng-show="isOpen(selectedTask) && !isTaskCreator(selectedTask) && !alreadyOffered">
 								<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#offModal">Make an Offer</button>
 							</div>
 
@@ -115,7 +115,7 @@
 									<span>{{offer.name}}</span>
 								</div>
 							</div><br>
-							
+
 						</div>
 					</div>
 				</div>
