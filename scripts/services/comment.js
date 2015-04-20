@@ -6,7 +6,6 @@ app.factory('Comment', function(FURL, $firebase) {
 
 	var Comment = {
 		comments: function(taskId) {
-			console.log(taskId);
 			return $firebase(ref.child('comments').child(taskId)).$asArray();
 		},
 
